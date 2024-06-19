@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+        .dynamic-image {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            background-image: url('https://www.pilotlifetraining.com/files/1215845/Perspectives_Weekly_Email_Header2.png?lmsauth=aa9690bd3d1fb807ad6aa3c087b28d348d4b5db6');
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto;
+        }
+        .dynamic-image::before {
+            content: "Instructions:\nReplace 'path-to-your-image.jpg' with your image URL";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .text-link {
+            margin-top: 10px;
+        }
+        .text-link a {
+            color: #00bf9a;
+            text-decoration: none;
+        }
+        .text-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dynamic-image"></div>
+        <div class="text-link">
+            <p>This is a dynamic image with a <a href="your-link-url.com">link</a> below it.</p>
+        </div>
+    </div>
+</body>
+</html>
