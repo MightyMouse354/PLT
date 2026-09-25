@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pilot Life Course Support</title>
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      padding: 6px;
+      padding: 5px;
       background: transparent;
       font-family: Avenir, Arial, sans-serif;
     }
@@ -17,53 +19,75 @@
     .support-card {
       max-width: 420px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 16px;
       background: #0b1d24;
       color: #ffffff;
-      border-radius: 18px;
+      border-radius: 16px;
     }
 
     .label {
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       color: #ffc400;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 800;
-      letter-spacing: 1.4px;
+      line-height: 1.4;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     h1 {
-      margin: 0 0 12px;
-      font-size: 23px;
+      margin: 0 0 10px;
+      font-size: 21px;
       line-height: 1.2;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.4px;
     }
 
     .description {
-      margin: 0 0 18px;
+      margin: 0 0 16px;
       color: #d5e5e6;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.5;
     }
 
     .button {
-      display: block;
-      padding: 15px 10px;
-      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      min-height: 44px;
+      padding: 11px 8px;
+      border-radius: 10px;
       background: #ffc400;
       color: #0b1d24;
-      text-align: center;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 800;
-      line-height: 1.3;
+      line-height: 1.2;
+      white-space: nowrap;
     }
 
-    .button:hover { background: #ffda4d; }
+    .button:hover {
+      background: #ffda4d;
+    }
 
     .button:focus-visible {
       outline: 3px solid #ffffff;
-      outline-offset: 4px;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 230px) {
+      .support-card {
+        padding: 12px;
+      }
+
+      h1 {
+        font-size: 19px;
+      }
+
+      .button {
+        font-size: 13px;
+      }
     }
   </style>
 </head>
@@ -74,9 +98,9 @@
     <h1 id="support-title">Support, made simpler.</h1>
 
     <p class="description">
-      Need a hand? Our new support form makes it easy to contact
-      the team, upload photos or screenshots of your workings,
-      and keep your request in one place.
+      Need a hand? Contact our team and upload photos or
+      screenshots of your workings—all through our new
+      support form.
     </p>
 
     <a
@@ -84,8 +108,10 @@
       href="https://pilotlifeoperations.com/course-support/"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Course Support (opens in a new tab)"
     >
-      Get Course Support &rarr;
+      <span>Course Support</span>
+      <span aria-hidden="true">&rarr;</span>
     </a>
   </section>
 </body>
